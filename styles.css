@@ -1,0 +1,40 @@
+.container-1, .container-2, .container-3 {
+  border: 1px solid black;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flex-box-container-1, .flex-box-container-2, .flex-box-container-3 {
+  border: 1px solid black;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex-box-container-1 div {
+  display: flex;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.flex-box-container-2 img {
+  border: 1px solid green; 
+  margin: 10px; 
+  width: 25%;  
+  box-shadow: 10px 10px 5px #ccc; 
+
+
+} 
+.flex-box-rps img {
+  width: 150px; 
+  height: 150px;
+}
+
+.flex-box-rps img:hover { 
+  box-shadow: 0px 10px 50px rgba(37,53,233, 1); 
+  
+}
