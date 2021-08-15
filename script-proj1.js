@@ -183,16 +183,19 @@ function blackjackHit() {
         showScore(YOU);}
 }  
 
+function sleep(ms) {
+    return new Promise(resolve=>(resolve,ms)); }
 
-
-function blackjackStand() {
+async function blackjackStand() {
     while(DEALER['score']<=16 && onetime<2)
     {
         onetime = 1;
         let card = randomCard() ;
         showCard(DEALER, card); 
         updateScore(DEALER,card);
-        showScore(DEALER);  }
+        showScore(DEALER);  
+        await sleep(500);
+    }
 
         if(DEALER['score']>16) {
             computeWinner(); 
