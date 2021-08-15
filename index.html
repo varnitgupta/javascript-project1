@@ -48,12 +48,68 @@
             <img id="rock" src="./images/rock.png" alt="" onclick="rpsGame(this)">
             <img id="paper" src="./images/paper.png" alt="" onclick="rpsGame(this)">
             <img id="scissor" src="./images/scissor.png" alt="" onclick="rpsGame(this)">
-        </div> 
-        <div>
-
-
-            
         </div>
+    </div> 
+    <div class="container-4">
+        <h2 id="change my color">Challenge 4: Change the colours of all buttons!</h2> 
+
+        <div class="flex-box-pick-color"> 
+                <form action="">
+                    <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                        <option value="random">random</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="reset">reset</option>
+                    </select>
+                </form>
+            <button class="btn btn-primary">arial!</button>
+            <a href="https://www.youtube.com/"><button  class="btn btn-danger">youtube</button></a>
+            <a href="https://www.youtube.com/results?search_query=noddy"><button class="btn btn-warning">noddy!</button></a>
+            <button class="btn btn-success">sinchan!</button>
+        </div>
+    </div> 
+
+    <div class="container-5">
+
+        <h2>Challenge 5: Blackjack</h2> 
+        <h3> <span id="blackjack-result"> Let's Play</span></h3> 
+
+        <div class="flex-box-blackjack-row-1">
+
+            <div id="your-box"> 
+                <h2>you: <span id="your-blackjack-result">0</span></h2>
+            </div> 
+            <div id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+
+        </div> 
+
+        <div class="flex-box-blackjack-row-2">
+
+            <div>
+                <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr-2 " id="blackjack-stand-button">Stand</button>
+                <button class="btn-lg btn-danger mr-2" id="blackjack-deal-button">Deal</button>
+            </div>
+
+        </div> 
+
+        <div class="flex-box-blackjack-row-3"> 
+            <table> 
+                <tr>
+                    <td>Wins</td>
+                    <td>Losses</td>
+                    <td>Draws</td> 
+                </tr>
+                <tr>
+                    <td> <span id="wins">0</span></td>
+                    <td><span id="lossses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+            </table>
+        </div>
+        
     </div>
 
 
