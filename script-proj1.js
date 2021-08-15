@@ -184,7 +184,7 @@ function blackjackHit() {
 }  
 
 function sleep(ms) {
-    return new Promise(resolve=>(resolve,ms)); }
+    return new Promise(resolve=>setTimeout(resolve,ms)); }
 
 async function blackjackStand() {
     while(DEALER['score']<=16 && onetime<2)
