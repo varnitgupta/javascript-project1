@@ -96,47 +96,58 @@ function rpsFrontEnd(humanImgChoice,botImgChoice, finalMessage) {
     document.getElementById("flex-box-rps-div").appendChild(botDiv);
 }
 
+//challenge 4 : change the colors of all buttons  
+ 
+var all_buttons  = document.getElementsByTagName("button"); 
+var copyAllButtons =  []; 
+for(let i = 0; i<all_buttons.length; i++) {
+    copyAllButtons.push(all_buttons[i].classList[1])
+}  
+
+
+function buttonColorChange(buttonThingy) { 
+    if(buttonThingy.value === 'red') { 
+        buttonsRed()
+    } else if(buttonThingy.value === 'green') { 
+        buttonsGreen()
+    } else if(buttonThingy.value === 'random') { 
+        randomColors()
+    } else if(buttonThingy.value === 'reset') { 
+        buttonColorReset()
+    } 
+
+} 
+
+function buttonsRed() {
+    for(let i = 0; i<all_buttons.length; i++) {
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]); 
+        all_buttons[i].classList.add("btn-danger");
+    } 
+}
+function buttonsGreen() {
+    for(let i = 0; i<all_buttons.length; i++) {
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]); 
+        all_buttons[i].classList.add("btn-success");
+    }
+}  
+function randomColors()
+{ 
+    for(let i = 0; i<all_buttons.length; i++) {
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]);  
+        all_buttons[i].classList.add(copyAllButtons[Math.floor(Math.random()*all_buttons.length)]); 
+        
+    }
+} 
+
+function buttonColorReset() { 
+    for(let i = 0; i<all_buttons.length; i++) {
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]);   
+        all_buttons[i].classList.add(copyAllButtons[i]);  
+    }    
+}
 
 
 
-
-// function rpsGame(yourChoice){
-//     humanChoice = yourChoice.id; 
-//     botChoiceOptions = [document.getElementById("rock"), document.getElementById("paper"), document.getElementById("scissor")];
-//     botChoice = botChoiceOptions[Math.floor(Math.random()*botChoiceOptions.length)].id ;
-//     message = decideWinner(humanChoice, botChoice);
-//     console.log(message, `botchoice: ${botChoice}`);  
-//     var humanChoiceElement = document.getElementById("flex-box-rps-div").childNodes[1]; 
-//     humanChoiceElement.src = yourChoice.src;   
-//     var messageElement = document.getElementById("flex-box-rps-div").childNodes[3] 
-//     messageElement.removeChild()
-// } 
-
-// function decideWinner(h, b) {
-//     if(h == "rock" && b == "paper") {
-//         var flag = 0;
-//     } else if(h == "rock" && b == "scissor") {
-//         flag = 1;
-//     } else if(h == "paper" && b == "rock") {
-//         flag = 1;
-//     } else if(h == "paper" && b == "scissor") {
-//         flag = 0;
-//     } else if(h == "scissor" && b == "rock") {
-//         flag = 0;
-//     } else if(h == "scissor" && b == "paper") {
-//         flag =  1;
-//     }else {
-//         flag = 2;
-//     }  
-//     if(flag == 1){
-//         return "you won!";
-//     }else if(flag == 0) {
-//         return "Computer won!" ;
-//     } else{
-//         return "tied!!";
-//     }
-
-// }
 
 // Challengef 5: Blackjack
 
